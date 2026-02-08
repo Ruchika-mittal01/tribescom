@@ -17,9 +17,18 @@ const CapabilitiesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="bg-[hsl(var(--section-alt))] py-20 sm:py-28">
+    <section ref={ref} className="bg-[hsl(var(--section-alt))] py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-12 lg:px-20">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.h2
+          className="text-2xl font-normal tracking-tight text-foreground sm:text-3xl lg:text-4xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+        >
+          Why Choose Us
+        </motion.h2>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {capabilities.map((cap, i) => (
             <motion.div
               key={cap.line1}
