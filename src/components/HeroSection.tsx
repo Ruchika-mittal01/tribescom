@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import tribesLogo from "@/assets/tribes-logo.png";
-import latitudeXpLogo from "@/assets/latitude-xp-logo.png";
 
 const HeroSection = () => {
   return (
@@ -29,13 +28,14 @@ const HeroSection = () => {
 
         {/* Hero text */}
         <div className="max-w-3xl pb-24 sm:pb-32">
-          <motion.div
+          <motion.h1
+            className="text-4xl font-normal leading-tight tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
           >
-            <img src={latitudeXpLogo} alt="Latitude XP - Design & Experiences" className="h-14 w-auto sm:h-18 lg:h-22" />
-          </motion.div>
+            Latitude XP
+          </motion.h1>
 
           <motion.p
             className="mt-4 text-lg font-light italic text-primary-foreground/80 sm:text-xl lg:text-2xl"
