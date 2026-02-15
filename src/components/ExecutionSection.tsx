@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import executionBg from "@/assets/execution-bg.jpg";
+import aboutImage from "@/assets/about-boardroom.jpg";
 
 const ExecutionSection = () => {
   const ref = useRef(null);
@@ -63,8 +63,8 @@ const ExecutionSection = () => {
           >
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl blur-xl" />
             <img
-              src={executionBg}
-              alt="Modern Indian corporate office interior"
+              src={aboutImage}
+              alt="Modern boardroom with presentation screen"
               className="relative w-full rounded-lg object-contain shadow-xl"
             />
           </motion.div>
